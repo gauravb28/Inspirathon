@@ -11,6 +11,10 @@ const CartSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'product',
       },
+      date: {
+        type: Date,
+        default: Date.now(),
+      },
     },
   ],
   date: {

@@ -4,6 +4,7 @@ import Header from "./Components/Header"
 import Login from './Components/Login/Login';
 import Product from './Components/Product';
 import Slider from "./Components/SliderC"
+import Popup from "./Components/Popup"
 function App() {
   return (
     <div className="App">
@@ -13,7 +14,7 @@ function App() {
         <Product />
         </div>
       <Footer/>   */}
-      <Login/>
+      <Popup/>
     </div>
   );
 }

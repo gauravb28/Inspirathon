@@ -15,7 +15,7 @@ import store from './store';
 import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
 import ErrorMessage from './Components/ErrorMessage';
-
+import Products from "./Components/Products";
 if (localStorage.getItem('token')) {
   setAuthToken(localStorage.getItem('token'));
 }
@@ -32,9 +32,7 @@ const App = () => {
         <Switch>
           <Route exact path="/products">
             <Slider />
-            <div className="products">
-              <Product />
-            </div>
+            <Products/>
           </Route>
           <Route exact path="/login" component={Login}></Route>
           <Route exact path="/loader" component={Loader}></Route>

@@ -15,7 +15,9 @@ import store from './store';
 import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
 import ErrorMessage from './Components/ErrorMessage';
-import Products from "./Components/Products";
+import Products from './Components/Products';
+import PrivateRoute from './PrivateRoute';
+
 if (localStorage.getItem('token')) {
   setAuthToken(localStorage.getItem('token'));
 }
@@ -30,14 +32,14 @@ const App = () => {
       <Router>
         <Header />
         <Switch>
-          <Route exact path="/products">
-            <Slider />
-            <Products/>
-          </Route>
-          <Route exact path="/login" component={Login}></Route>
           <Route exact path="/loader" component={Loader}></Route>
-          <Route exact path="/modal" component={Popup}></Route>
-          <Route exact path="/cart" component={Cart}></Route>
+          <Route exact path="/login" component={Login}></Route>
+          <PrivateRoute exact path="/products">
+            <Slider />
+            <Products />
+          </PrivateRoute>
+          <PrivateRoute exact path="/modal" component={Popup}></PrivateRoute>
+          <PrivateRoute exact path="/cart" component={Cart}></PrivateRoute>
           <Route path="/error" component={ErrorMessage}></Route>
           <Route component={NotFound}></Route>
         </Switch>

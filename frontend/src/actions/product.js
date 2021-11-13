@@ -1,24 +1,19 @@
 import axios from 'axios';
-import {
-  GET_PRODUCTS,
-   GET_PRODUCT,
-   PRODUCT_ERROR
-  
-} from './types';
+import { GET_PRODUCTS, GET_PRODUCT, PRODUCT_ERROR } from './types';
 
-// Get Posts
+// Get Products
 export const getProducts = () => async (dispatch) => {
   try {
     const res = await axios.get('http://localhost:5000/api/products');
-    console.log(res);
     dispatch({
       type: GET_PRODUCTS,
       payload: res.data,
     });
   } catch (err) {
+    const errors = err.response.data.errors;
     dispatch({
       type: PRODUCT_ERROR,
-     
+      payload: errors,
     });
   }
 };
@@ -32,9 +27,10 @@ export const getProduct = (id) => async (dispatch) => {
       payload: res.data,
     });
   } catch (err) {
+    const errors = err.response.data.errors;
     dispatch({
       type: PRODUCT_ERROR,
-    
+      payload: errors,
     });
   }
 };

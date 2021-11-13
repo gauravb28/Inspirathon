@@ -28,8 +28,8 @@ function Header() {
        
        
           <div className="header__option">
-            <span className="option__one">Returns</span>
-            <span className="option__two">& Orders</span>
+            <button className="btn" style={{width:"80px",color:"white"}}>Logout</button>
+            
           </div>
        
        

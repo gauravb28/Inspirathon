@@ -1,54 +1,37 @@
 import './App.css';
 import Footer from './Components/Footer';
-import Header from "./Components/Header"
+import Header from './Components/Header';
 import Login from './Components/Login/Login';
 import Product from './Components/Product';
-import Slider from "./Components/SliderC"
-import Popup from "./Components/Popup"
+import Slider from './Components/SliderC';
+import Popup from './Components/Popup';
 import Cart from './Components/Cart';
-import NotFound from "./Components/NotFound"
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import NotFound from './Components/NotFound';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Loader from './Components/Loader';
-function App() {
+
+const App = () => {
   return (
     <div className="App">
-       <Router>
-     
-       <Header/>
-       
+      <Router>
+        <Header />
         <Switch>
-         
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/loader">
-            <Loader />
-          </Route>
-          <Route path="/notFound">
-            <NotFound />
-          </Route>
-          <Route path="/modal">
-            <Popup />
-          </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Slider />
             <div className="products">
-        <Product />
-        </div>
+              <Product />
+            </div>
           </Route>
+          <Route exact path="/login" component={Login}></Route>
+          <Route exact path="/loader" component={Loader}></Route>
+          <Route exact path="/modal" component={Popup}></Route>
+          <Route exact path="/cart" component={Cart}></Route>
+          <Route path="/notFound" component={NotFound}></Route>
         </Switch>
-        <Footer/> 
-    </Router>
-      
-    
-     
+        <Footer />
+      </Router>
     </div>
   );
-}
+};
 
 export default App;

@@ -112,6 +112,7 @@ button {
 .img__text p {
     font-size: 14px;
     line-height: 1.5;
+    padding-right:20%;
 }
 .cont.s--signup .img__text.m--up {
     transform: translateX(520px);

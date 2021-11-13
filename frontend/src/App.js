@@ -9,6 +9,7 @@ import Cart from './Components/Cart';
 import NotFound from './Components/NotFound';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Loader from './Components/Loader';
+import ErrorMessage from "./Components/ErrorMessage"
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
           <Route exact path="/modal" component={Popup}></Route>
           <Route exact path="/cart" component={Cart}></Route>
           <Route path="/notFound" component={NotFound}></Route>
+          <Route path="/error" component={ErrorMessage}></Route>
         </Switch>
         <Footer />
       </Router>

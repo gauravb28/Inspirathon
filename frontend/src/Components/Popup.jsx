@@ -3,7 +3,7 @@ import "./Popup.css"
 function Popup() {
     return (
         <div>
-    <div class="wrapper">
+    
 	<div class="outer">
 		<div class="content animated fadeInLeft">
 			<span class="bg animated fadeInDown">EXCLUSIVE</span>
@@ -15,10 +15,12 @@ function Popup() {
 			</div>
 			
 		</div>
-		<img src="https://media.istockphoto.com/photos/blue-pottery-works-in-okinawa-picture-id694329856?b=1&k=20&m=694329856&s=170667a&w=0&h=xlgzwV5pFLpLDKyrijNZ5oPalKjiZIKbe3MSYUzwxs0=" width="300px" class="animated fadeInRight"/>
+		<div className="popup_image">
+		<img src="https://media.istockphoto.com/photos/blue-pottery-works-in-okinawa-picture-id694329856?b=1&k=20&m=694329856&s=170667a&w=0&h=xlgzwV5pFLpLDKyrijNZ5oPalKjiZIKbe3MSYUzwxs0=" width="300px" class="animated fadeInRight popup_img"/>
+	</div>
 	</div>
 	<p class="footer">Based on the Silk UI Kit - DesignModo Market</p>
-</div>
+
 
         </div>
     )

@@ -12,29 +12,25 @@
 	height: 100vh;
 }
 
+
 .outer {
 	position: relative;
 	background: #fff;
 	height: 350px;
-	width: 600px;
+	width: 550px;
 	overflow: hidden;
 	display: flex;
 	align-items: center;
 }
 
-img {
 
-	z-index: 0;
-	animation-delay: 0.5s;
-
-   
-}
 
 .content {
 	animation-delay: 0.3s;
 	position: absolute;
-	left: 20px;
+	left: 10px;
 	z-index: 3
+
 	
 }
 

@@ -8,7 +8,7 @@ function Footer() {
  
  <div class="footer-left">
  
- <h3>WebDev<span>Trick</span></h3>
+ <h3>Name<span>bla bla</span></h3>
  
  <p class="footer-links">
  <a href="#">Home</a>
@@ -18,13 +18,12 @@ function Footer() {
  <a href="#">Pricing</a>
  ·
  <a href="#">About</a>
- ·
- <a href="#">Faq</a>
+
  ·
  <a href="#">Contact</a>
  </p>
  
- <p class="footer-company-name">webdevtrick &copy; 2019</p>
+ <p class="footer-company-name">Name &copy; 2021</p>
  </div>
  
  <div class="footer-center">
@@ -36,12 +35,12 @@ function Footer() {
  
  <div>
  <i class="fa fa-phone"></i>
- <p>+1 555 123456</p>
+ <p>+91 555 123456</p>
  </div>
  
  <div>
  <i class="fa fa-envelope"></i>
- <p><a href="mailto:support@company.com">contact@webdevtrick.com</a></p>
+ <p><a href="mailto:support@company.com">contact@name.com</a></p>
  </div>
  
  </div>
@@ -49,8 +48,8 @@ function Footer() {
  <div class="footer-right">
  
  <p class="footer-company-about">
- <span>About the company</span>
- Web Dev Trick is a blog for web designers, graphic designers, web developers &amp; SEO Learner.
+ <span>About the website</span>
+ Name is a website to make the goods made by highly skilled women artisans to the public.
  </p>
  
  <div class="footer-icons">

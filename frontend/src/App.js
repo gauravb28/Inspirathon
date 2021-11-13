@@ -14,6 +14,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
+import ErrorMessage from './Components/ErrorMessage';
 
 if (localStorage.getItem('token')) {
   setAuthToken(localStorage.getItem('token'));
@@ -39,6 +40,7 @@ const App = () => {
           <Route exact path="/loader" component={Loader}></Route>
           <Route exact path="/modal" component={Popup}></Route>
           <Route exact path="/cart" component={Cart}></Route>
+          <Route path="/error" component={ErrorMessage}></Route>
           <Route component={NotFound}></Route>
         </Switch>
         <Footer />
